@@ -1,0 +1,17 @@
+.logo{
+    width:80px;
+    border-radius:100px;
+    background:white;
+    background-color:white;
+}
+
+.custom-navbar-nav .nav-link {
+    font-size: 1.2rem; /* Adjust the size as needed */
+}
+
+
+body {
+    background: #4F8B89;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
