@@ -11,14 +11,27 @@ namespace EyeClinic.Controllers
         {
             _emailsender = emailSender;
         }
-      
-        public async Task<IActionResult> Index()
+
+        public IActionResult Index()
         {
-            var receiver = "shreya.prajapati@info.com.np";
-            var subject = "test mail abcderf";
-            var message = "hello shreya";
-            await _emailsender.SendEmailAsync(receiver, subject, message);
             return View();
+
+        }
+
+            public async Task<IActionResult> createEmail(string name , string email ,string phone, string subject, string message)
+        {
+            try
+            {
+                var receiver = "meetadityaprasad@gmail.com";
+                
+                await _emailsender.SendEmailAsync(receiver,name , email,phone , subject, message);
+                return View("Index");
+            }
+            catch (Exception ex) 
+            {
+                throw ex;
+            }
+         
         }
 
 
