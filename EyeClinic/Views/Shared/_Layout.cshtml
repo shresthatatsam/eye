@@ -22,34 +22,35 @@
             <ul class="navbar-nav ml-auto custom-navbar-nav">
                 <!-- Added custom class -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" asp-controller="About" asp-action="Index">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Service</a>
+                    <a class="nav-link" asp-controller="OurService" asp-action="Index">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" asp-controller="Team" asp-action="Index">MeetTheTeam</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Contact" asp-action="Index">Contact</a>
                 </li>
             </ul>
           
         </div>
     </nav>
-    @Html.Partial("_Social")
-    @Html.Partial("_carosal")
-    @Html.Partial("_AboutUs")
-    @* @Html.Partial("_WhyChooseUs") *@
 
-    @Html.Partial("_ourServices")
-    @Html.Partial("_Footer")
+    @Html.Partial("_Social")
+  
     <div class="">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
+    <footer>
+        @Html.Partial("_Footer")
+    </footer>
  
  @*    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
